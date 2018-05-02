@@ -1,0 +1,16 @@
+ID: StudentApp
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: StudentDB
+   type: hdb
+   path: StudentDB
+   requires:
+    - name: hdi_StudentDB
+
+resources:
+ - name: hdi_StudentDB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
