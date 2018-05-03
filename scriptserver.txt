@@ -1,0 +1,17 @@
+--------------------------------
+-- run against systemdb database
+--------------------------------
+
+-- check tenant database exists and is started
+SELECT * FROM SYS.M_DATABASES;
+
+-- add script server to tenant database
+ALTER DATABASE HXE ADD 'scriptserver';
+
+
+------------------------------
+-- run against tenant database
+------------------------------
+
+-- check script server
+SELECT * FROM SYS.M_SERVICES;
